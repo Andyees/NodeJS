@@ -1,0 +1,56 @@
+<%- include("header")  -%> 
+
+<div class="container">
+    <div class="row">
+
+ <!-- FORMULARIO PARA INGRESAR ACTIVIDADES -->
+
+        <div class="col-md-5">
+            <div class="card">
+                <h1>Ingreso de actividades</h1>
+                <div class="card-body">
+                    <form action="/agregarActividad" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="titulo" name="titulo"  placeholder="Ingrese el titulo de la actividad" class="form-control mb-4">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control mb-4" id="descripcion" name="descripcion" placeholder="Ingrese la descripcion de la actividad"  ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block"> Agregar Actividad</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- TABLA DE ACTIVIDADES -->
+
+        <div class="col-md-7">
+            <table class="table table-bordered table-hover">
+            
+            <thead>
+                <tr>
+                    <th>Numero Identificacion</th>
+                    <th>Titulo</th>
+                    <th>Descripcion</th>
+                    <th>Metodos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<%- include("footer")  -%> 
+    
