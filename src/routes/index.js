@@ -32,4 +32,20 @@ router.get("/eliminar/:id",async(req,res)=>{
 
 })
 
+router.get("/editar/:id",async(req,res)=>{
+
+    const {id}=req.params
+    const tarea= await Tarea.findById(id)
+    console.log(tarea.descripcion)
+    res.render("edit",{tarea})
+
+})
+
+router.post("/editar/:id",async(req,res)=>{
+    const {id}=req.params
+    await Tarea.update({_id:id},req.body)
+    res.redirect("/")
+
+})
+
 module.exports=router;
